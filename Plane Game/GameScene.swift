@@ -50,6 +50,23 @@ class GameScene: SKScene {
             clouds.append(cloud)
             addChild(cloud)
         }
+        
+        let engineSound = SKAudioNode(fileNamed: "engine.mp3")
+        addChild(engineSound)
+        engineSound.autoplayLooped = true
+        engineSound.run(SKAction.changeVolume(by: 0.5, duration: 0))
+        
+        do{
+            let sounds: [String] = ["thunder", "yay"]
+            for sound in sounds{
+                let path: String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let avPlayer: AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                avPlayer.prepareToPlay()
+            }
+        }catch{
+            print("GameScene -> didMove() -> failed to load audio")
+        }
     }
     
     func touchDown(atPoint pos : CGPoint){
@@ -96,9 +113,11 @@ class GameScene: SKScene {
         player?.Update()
         
         island?.Update()
+        CollisionManager.squaredRadiusCheck(scene: self, object1: player!, object2: island!)
         
         for cloud in clouds{
             cloud.Update()
+            CollisionManager.squaredRadiusCheck(scene: self, object1: player!, object2: cloud)
         }
     }
 }

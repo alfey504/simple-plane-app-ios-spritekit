@@ -10,7 +10,10 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var livesLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +32,14 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        CollisionManager.gameViewController = self
+        ScoreManager.score = 0
+        ScoreManager.lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -38,8 +47,16 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func updateLivesLabel(){
+        livesLabel.text = "Lives: \(ScoreManager.lives)"
+    }
+    
+    func updateScoreLabel(){
+        scoreLabel.text = "Score: \(ScoreManager.score)"
     }
 }
