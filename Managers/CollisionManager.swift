@@ -36,12 +36,20 @@ class CollisionManager{
                         print("Collision Manger -> squaredRadiusCheck -> Collision with Island")
                         scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
                         ScoreManager.score += 100
+                        if(ScoreManager.score % 200 == 0){
+                            ScoreManager.lives += 1
+                            gameViewController?.updateLivesLabel()
+                        }
                         gameViewController?.updateScoreLabel()
                         break
                     case "cloud":
                         print("Collision Manger -> squaredRadiusCheck -> Collision with cloud")
                         scene.run(SKAction.playSoundFileNamed("thunder", waitForCompletion: false))
                         ScoreManager.lives -= 1
+                        if(ScoreManager.lives <= 0){
+                            gameViewController?.presentEndScene()
+                        }
+                    
                         gameViewController?.updateLivesLabel()
                         break
                     default:

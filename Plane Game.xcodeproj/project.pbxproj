@@ -33,6 +33,8 @@
 		F65F514D2999D8CE000E3817 /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F65F514C2999D8CE000E3817 /* StartScene.sks */; };
 		F65F514F2999D973000E3817 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65F514E2999D973000E3817 /* StartScene.swift */; };
 		F65F51512999E0CB000E3817 /* Dock51.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F61EE0EC297DF2A000ED0423 /* Dock51.ttf */; };
+		F65F51532999E4D8000E3817 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F65F51522999E4D8000E3817 /* EndScene.sks */; };
+		F65F51552999E4F7000E3817 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65F51542999E4F7000E3817 /* EndScene.swift */; };
 		F6729A5629872BAE00464472 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A5529872BAE00464472 /* Layer.swift */; };
 		F6729A5829872D2600464472 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A5729872D2600464472 /* Cloud.swift */; };
 		F6729A5A2987302B00464472 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A592987302B00464472 /* Island.swift */; };
@@ -97,6 +99,8 @@
 		F65F514C2999D8CE000E3817 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		F65F514E2999D973000E3817 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		F65F51502999E098000E3817 /* Plane-Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Plane-Game-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F65F51522999E4D8000E3817 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		F65F51542999E4F7000E3817 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 		F6729A5529872BAE00464472 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		F6729A5729872D2600464472 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		F6729A592987302B00464472 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				F61EE0A5297DF24B00ED0423 /* GameScene.swift */,
 				F65F514C2999D8CE000E3817 /* StartScene.sks */,
 				F65F514E2999D973000E3817 /* StartScene.swift */,
+				F65F51522999E4D8000E3817 /* EndScene.sks */,
+				F65F51542999E4F7000E3817 /* EndScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				F6211FF629909D40006EF013 /* yay.mp3 in Resources */,
 				F6211FF529909D3E006EF013 /* thunder.mp3 in Resources */,
 				F61EE0A2297DF24B00ED0423 /* GameScene.sks in Resources */,
+				F65F51532999E4D8000E3817 /* EndScene.sks in Resources */,
 				F61EE0AD297DF24B00ED0423 /* Assets.xcassets in Resources */,
 				F6211FF329909D38006EF013 /* engine.ogg in Resources */,
 				F6211FF129909D33006EF013 /* yay.ogg in Resources */,
@@ -422,6 +429,7 @@
 				F61EE0A6297DF24B00ED0423 /* GameScene.swift in Sources */,
 				F6729A5629872BAE00464472 /* Layer.swift in Sources */,
 				F61EE0A8297DF24B00ED0423 /* GameViewController.swift in Sources */,
+				F65F51552999E4F7000E3817 /* EndScene.swift in Sources */,
 				F65F514F2999D973000E3817 /* StartScene.swift in Sources */,
 				F61EE0F4297DFDCE00ED0423 /* Player.swift in Sources */,
 				F61EE0F2297DF49D00ED0423 /* Ocean.swift in Sources */,

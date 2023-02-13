@@ -19,6 +19,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,11 +63,17 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        startLabel.isHidden = true
-        startButton.isHidden = true
-        
-        scoreLabel.isHidden = false
-        livesLabel.isHidden  = false
+       presentGameScene()
+    }
+    
+    @IBAction func restartButtonPressed(_ sender: Any) {
+        presentGameScene()
+    }
+    
+    func presentGameScene(){
+        setGameSceneLabels(isHidden: false)
+        setStarScreenLabels(isHidden: true)
+        setEndLabels(isHidden: true)
         
         ScoreManager.score = 0
         ScoreManager.lives = 5
@@ -75,14 +84,35 @@ class GameViewController: UIViewController {
     }
     
     func presentStartScene(){
-        scoreLabel.isHidden = true
-        livesLabel.isHidden = true
-        startLabel.isHidden = false
-        startButton.isHidden = false
+        setGameSceneLabels(isHidden: true)
+        setStarScreenLabels(isHidden: false)
+        setEndLabels(isHidden: true)
         setScene(sceneName: "StartScene")
     }
     
     func presentEndScene(){
+        setStarScreenLabels(isHidden: true)
+        setGameSceneLabels(isHidden: false)
+        setEndLabels(isHidden: false)
         
+        setScene(sceneName: "EndScene")
+        
+    }
+    
+    func setGameSceneLabels(isHidden: Bool){
+        scoreLabel.isHidden = isHidden
+        livesLabel.isHidden = isHidden
+        
+    }
+    
+    func setStarScreenLabels(isHidden: Bool){
+        startLabel.isHidden = isHidden
+        startButton.isHidden = isHidden
+        startButton.isUserInteractionEnabled = !isHidden
+    }
+    
+    func setEndLabels(isHidden: Bool){
+        endLabel.isHidden = isHidden
+        restartButton.isHidden = isHidden
     }
 }
