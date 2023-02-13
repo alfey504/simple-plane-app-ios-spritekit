@@ -30,6 +30,9 @@
 		F6211FF529909D3E006EF013 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F61EE0E9297DF2A000ED0423 /* thunder.mp3 */; };
 		F6211FF629909D40006EF013 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F61EE0EA297DF2A000ED0423 /* yay.mp3 */; };
 		F6211FF82990A11E006EF013 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6211FF72990A11E006EF013 /* ScoreManager.swift */; };
+		F65F514D2999D8CE000E3817 /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F65F514C2999D8CE000E3817 /* StartScene.sks */; };
+		F65F514F2999D973000E3817 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65F514E2999D973000E3817 /* StartScene.swift */; };
+		F65F51512999E0CB000E3817 /* Dock51.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F61EE0EC297DF2A000ED0423 /* Dock51.ttf */; };
 		F6729A5629872BAE00464472 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A5529872BAE00464472 /* Layer.swift */; };
 		F6729A5829872D2600464472 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A5729872D2600464472 /* Cloud.swift */; };
 		F6729A5A2987302B00464472 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6729A592987302B00464472 /* Island.swift */; };
@@ -91,6 +94,9 @@
 		F61EE0F3297DFDCE00ED0423 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F6211FEF29909121006EF013 /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
 		F6211FF72990A11E006EF013 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		F65F514C2999D8CE000E3817 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		F65F514E2999D973000E3817 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		F65F51502999E098000E3817 /* Plane-Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Plane-Game-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F6729A5529872BAE00464472 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		F6729A5729872D2600464472 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		F6729A592987302B00464472 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		F61EE093297DF24B00ED0423 = {
 			isa = PBXGroup;
 			children = (
+				F65F514B2999D870000E3817 /* Scenes */,
 				F6211FEE29909109006EF013 /* Managers */,
 				F61EE0D7297DF2A000ED0423 /* Assets */,
 				F61EE0D4297DF28200ED0423 /* Core */,
@@ -148,10 +155,9 @@
 		F61EE09E297DF24B00ED0423 /* Plane Game */ = {
 			isa = PBXGroup;
 			children = (
+				F65F51502999E098000E3817 /* Plane-Game-Info.plist */,
 				F61EE09F297DF24B00ED0423 /* AppDelegate.swift */,
-				F61EE0A1297DF24B00ED0423 /* GameScene.sks */,
 				F61EE0A3297DF24B00ED0423 /* Actions.sks */,
-				F61EE0A5297DF24B00ED0423 /* GameScene.swift */,
 				F61EE0A7297DF24B00ED0423 /* GameViewController.swift */,
 				F61EE0A9297DF24B00ED0423 /* Main.storyboard */,
 				F61EE0AC297DF24B00ED0423 /* Assets.xcassets */,
@@ -254,6 +260,17 @@
 				F6211FF72990A11E006EF013 /* ScoreManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F65F514B2999D870000E3817 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F61EE0A1297DF24B00ED0423 /* GameScene.sks */,
+				F61EE0A5297DF24B00ED0423 /* GameScene.swift */,
+				F65F514C2999D8CE000E3817 /* StartScene.sks */,
+				F65F514E2999D973000E3817 /* StartScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +386,9 @@
 				F6211FF129909D33006EF013 /* yay.ogg in Resources */,
 				F61EE0B0297DF24B00ED0423 /* LaunchScreen.storyboard in Resources */,
 				F61EE0A4297DF24B00ED0423 /* Actions.sks in Resources */,
+				F65F514D2999D8CE000E3817 /* StartScene.sks in Resources */,
 				F6211FF429909D3B006EF013 /* engine.mp3 in Resources */,
+				F65F51512999E0CB000E3817 /* Dock51.ttf in Resources */,
 				F6211FF229909D35006EF013 /* thunder.ogg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +422,7 @@
 				F61EE0A6297DF24B00ED0423 /* GameScene.swift in Sources */,
 				F6729A5629872BAE00464472 /* Layer.swift in Sources */,
 				F61EE0A8297DF24B00ED0423 /* GameViewController.swift in Sources */,
+				F65F514F2999D973000E3817 /* StartScene.swift in Sources */,
 				F61EE0F4297DFDCE00ED0423 /* Player.swift in Sources */,
 				F61EE0F2297DF49D00ED0423 /* Ocean.swift in Sources */,
 				F6729A5A2987302B00464472 /* Island.swift in Sources */,
@@ -585,6 +605,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SS742B69L7;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plane-Game-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -613,6 +634,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SS742B69L7;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plane-Game-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
